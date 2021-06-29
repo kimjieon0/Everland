@@ -1,35 +1,29 @@
-package Day4;
+package everland;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EverlandArrayList {
-	public  ArrayList<String> ArrTicket = new ArrayList<String>();
-	public  ArrayList<String> ArrAge = new ArrayList<String>();
-	public  ArrayList<Integer> ArrCount = new ArrayList<Integer>();
-	public  ArrayList<Integer> ArrPrice = new ArrayList<Integer>();
-	public  ArrayList<String> Arrb = new ArrayList<String>();
-	public  int addOrder = 0;
-	
-	
-	
-	public  void clearAll() {
-		
+	public ArrayList<String> ArrTicket = new ArrayList<String>();
+	public ArrayList<String> ArrAge = new ArrayList<String>();
+	public ArrayList<Integer> ArrCount = new ArrayList<Integer>();
+	public ArrayList<Integer> ArrPrice = new ArrayList<Integer>();
+	public ArrayList<String> Arrb = new ArrayList<String>();
+	public int addOrder = 0;
+
+	public void clearAll() {
+
 		ArrTicket.clear();
 		ArrAge.clear();
 		ArrCount.clear();
 		ArrPrice.clear();
 		ArrPrice.clear();
-		
-		
-		
+
 	}
-	
-	
-	public  void AddWant(String ticket, String age, int count, int price, String b) {
-		
-		
-		System.out.println("1. Ãß°¡ ±¸¸Å    2. ÀÌ¿ë Á¾·á");
+
+	public void AddWant(String ticket, String age, int count, int price, String b) {
+
+		System.out.println("1. ì¶”ê°€ êµ¬ë§¤    2. ì´ìš© ì¢…ë£Œ");
 		Scanner myInput4 = new Scanner(System.in);
 		addOrder = myInput4.nextInt();
 
@@ -40,15 +34,14 @@ public class EverlandArrayList {
 		ArrPrice.add(price);
 		Arrb.add(b);
 	}
-	
-	public  void result(int count, int price) {
-		
 
-		System.out.println("¤Ñ");
-		System.out.printf("°¡°İÀº %d ÀÔ´Ï´Ù.\n", price * count);
-		System.out.println("°¨»çÇÕ´Ï´Ù.");
+	public void result(int count, int price) {
+
+		System.out.println("ã…¡");
+		System.out.printf("ê°€ê²©ì€ %d ì…ë‹ˆë‹¤.\n", price * count);
+		System.out.println("ê°ì‚¬í•©ë‹ˆë‹¤.");
 		System.out.println();
-		System.out.println("=============== ¿¡¹ö·£µå ===============");
+		System.out.println("=============== ì—ë²„ëœë“œ ===============");
 		for (int index = 0; index < ArrTicket.size(); index++) {
 			System.out.printf("%s  %s  X  %d  %d  %s\n", ArrTicket.get(index), ArrAge.get(index), ArrCount.get(index),
 					ArrCount.get(index) * ArrPrice.get(index), Arrb.get(index));
