@@ -1,4 +1,4 @@
-package Day4;
+package everland;
 
 import java.time.LocalDate;
 import java.text.SimpleDateFormat;
@@ -8,27 +8,33 @@ import java.util.Scanner;
 
 public class EverlandMain {
 
-
-
 	public static void main(String[] args) {
-		EverlandClass everlandprocess = new EverlandClass();
+		EverlandCount everlandprocess = new EverlandCount();
 		EverlandArrayList everlandArray = new EverlandArrayList();
-		everlandprocess.DatePattern();
+		EverlandPrice everlandprice = new EverlandPrice();
+		everlandprice.DatePattern();
 		while (true) {
 			everlandArray.clearAll();
 			do {
-				everlandprocess.inputDate();
-				everlandprocess.BirthDay();
-				if (everlandprocess.socialNumber.equals("0")) {continue;}
-				everlandprocess.BirthTicket();
+				everlandprice.inputDate();
+				everlandprice.BirthDay();
+				if (everlandprice.socialNumber.equals("0")) {
+					continue;
+				}
+				everlandprice.BirthTicket();
 				everlandprocess.TicketCount();
-				if (everlandprocess.count == 0) {continue;}
-				System.out.println("¤Ñ");
-				everlandprocess.PreferentialTreatment();
-				if (everlandprocess.benefit == 0) {continue;}
-				everlandArray.AddWant(everlandprocess.ticket, everlandprocess.age, everlandprocess.price, everlandprocess.count, everlandprocess.b);
-				} while (everlandArray.addOrder == 1);
-			everlandArray.result(everlandprocess.price, everlandprocess.count);
+				if (everlandprocess.count == 0) {
+					continue;
+				}
+				System.out.println("Â¤Ã‘");
+				everlandprice.PreferentialTreatment();
+				if (everlandprice.benefit == 0) {
+					continue;
+				}
+				everlandArray.AddWant(everlandprice.ticket, everlandprice.age, everlandprice.price,
+						everlandprocess.count, everlandprice.b);
+			} while (everlandArray.addOrder == 1);
+			everlandArray.result(everlandprice.price, everlandprocess.count);
 			break;
 		}
 	}
