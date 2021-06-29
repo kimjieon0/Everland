@@ -7,10 +7,7 @@ import java.util.Scanner;
 
 public class EverlandCount {
 
-	public int todayYear, todayDate, birthYear, birthMonth, birthDay, birthDate, reservationDate, benefit, count = 0,
-			manAge, price = 0;
-	public String ticket = null, socialNumber = null, age = null;
-	public String b = null;
+	public int count = 0;
 
 	public void TicketCount() {
 		while (true) {
